@@ -1,0 +1,9 @@
+language: minimal
+
+services: docker
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.23.2
+
+install:
+  - echo "test"
