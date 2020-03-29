@@ -2,6 +2,12 @@
 FROM beevelop/ionic AS ionic
 # Create app directory
 WORKDIR /usr/src/app
+RUN apk --no-cache --virtual build-dependencies add \
+    python \
+    make \
+    g++ \
+    && npm install \
+    && apk del build-dependencies
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
