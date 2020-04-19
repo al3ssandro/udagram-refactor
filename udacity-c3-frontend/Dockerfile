@@ -16,3 +16,5 @@ FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
 
+# for running it standalone and not by docker compose
+# COPY nginx.conf /etc/nginx/nginx.conf
